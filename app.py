@@ -29,6 +29,11 @@ if user_menu == 'Medal Tally':
     country, years = helper.country_year_list(df)
     selected_year = st.sidebar.selectbox("Select Year", years) 
     selected_country = st.sidebar.selectbox("Select Country", country)
+    
+    st.sidebar.header('Get the Code')
+    link = '[GitHub](https://github.com/Hassi34/OlympicsDataAnalysis-Streamlit.git)'
+    st.sidebar.markdown(link, unsafe_allow_html=True)
+
     medal_tally = helper.fetch_medal_tally( selected_year, selected_country, df) 
     if selected_year == 'Overall' and selected_country == 'Overall':
         st.title('Overall Tally')
