@@ -31,8 +31,10 @@ if user_menu == 'Medal Tally':
     selected_country = st.sidebar.selectbox("Select Country", country)
     
     st.sidebar.header('Get the Code')
-    link = '[GitHub](https://github.com/Hassi34/OlympicsDataAnalysis-Streamlit.git)'
-    st.sidebar.markdown(link, unsafe_allow_html=True)
+    github_link = '[GitHub](https://github.com/Hassi34/OlympicsDataAnalysis-Streamlit.git)'
+    st.sidebar.markdown(github_link, unsafe_allow_html=True)
+    portfolio_link = '[My Portfolio](https://hasnainmehmood.pythonanywhere.com/)'
+    st.sidebar.markdown(portfolio_link, unsafe_allow_html=True)
 
     medal_tally = helper.fetch_medal_tally( selected_year, selected_country, df) 
     if selected_year == 'Overall' and selected_country == 'Overall':
